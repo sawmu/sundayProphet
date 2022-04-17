@@ -2,7 +2,7 @@
 
 The Sunday Prophet is the weekend edition of the Daily Prophet. This edition includes a variety of features that allow users to upload images to the canvas area and add multiple tags with annotations.
 
-Demo: https://sawmu.github.io/The-Sunday-Prophet/
+Live: https://sawmu.github.io/sundayProphet/
 
 ## Features
 
