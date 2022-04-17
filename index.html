@@ -1,0 +1,163 @@
+<html lang="en">
+<head>
+    
+    <!--=========================*
+                Met Data
+    *===========================-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Sunday Prophet is the weekend edition of the Daily Prophet. This edition includes a variety of features that allow users to upload images to the canvas area and add multiple tags with annotations.">
+
+    <!--=========================*
+              Page Title
+    *===========================-->
+    <title>The Sunday Prophet</title>
+
+    <!--=========================*
+                Favicon
+    *===========================-->
+    <link rel="icon" type="image/x-icon" href="https://mukahbaw.com/images/brand/1729959251201409.png">
+
+    <!--=========================*
+            CSS
+    *===========================-->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- <link rel="stylesheet" href="./assets/css/effect.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!--=========================*
+            Font Awesome
+    *===========================-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+
+</head>
+
+<body onload="initializePage()">
+    <div class="page-container">
+        <!-- Lighting Effect -->
+        <!-- <div class="ag-sparks">
+            <div class="ag-spark"></div>
+            <div class="ag-lightning"></div>
+        </div> -->
+
+        <!-- Banner -->
+        <div class="banner-bg">
+            <img src="assets/image/Banner-1.png" alt="Banner">
+        </div>
+    </div>
+
+
+    <!-- Section Text -->
+    <div id="quote">
+            <p>"The Sunday Prophet is the weekend edition of the Daily Prophet. This edition includes a variety of features that allow users to upload images to the canvas area and add multiple tags with annotations."</p>
+    </div>
+
+    <div class="main-btn">
+        <div class="custom-file-upload btn-hp" onclick="(()=>{document.querySelector('#input-file').click()})()">
+            Upload Image
+        </div>
+
+        <div class="custom-file-upload btn-hp" onclick="(()=>{document.querySelector('#files').click()})()">
+            Add News
+        </div>
+
+    </div>
+
+    <div>
+        <div class="wrapper">
+            <div class="container">
+                <div class="canvas-wrapper">
+                    <canvas id="canvas-upload"></canvas>
+                    <canvas id="canvas-text"></canvas>
+                    <div id="annotation-list"></div>
+
+                    <textarea id="input-annotation"></textarea>
+                </div>
+            </div>
+            
+            <div class="spacer"></div>
+        
+            <div class="container hidden" id="gallery-container"></div>
+    
+            <div class="container" style="height: 70px; opacity: 0;"></div>
+        </div>
+
+        <div class="bottom-btn">
+
+            <div id="btn-prev" class="custom-file-upload" onclick="switchImage(-1)">
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+    
+            <div class="custom-file-upload btn-two " onclick="deleteImage()">
+                Delete Image
+            </div>
+    
+            <div id="btn-next" class="custom-file-upload" onclick="switchImage(1)">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+        </div>
+
+         
+       
+    
+        
+    </div>
+
+     <!-- Gallery -->
+     <div class="news-section">
+         
+            <h2 class="news-title">
+                Trending News
+            </h2>
+            
+        
+        
+        <div id="preview"></div>
+        <div id="list">
+        </div>
+
+        <div class="gallery-main">
+
+            <div class="btn-two gallery-delete">
+                <a href="#" id="deleteImgs">Delete Images</a>
+                </div>
+
+        </div>
+
+       
+        
+    </div>
+    
+ 
+    <form id="input-form">
+        <input id="input-file" type="file" onchange="uploadFile()"/>
+    </form>
+
+
+
+    <input type="file" id="files" >
+
+
+    <p id="state" class="hidden">No images stored in your browser.</p>
+
+
+
+    <footer>
+        <p class="hidden">Saw Mu Ka Hbaw Aye</p>
+        <p></p>
+    </footer>
+
+
+
+    <!--=========================*
+            Scripts
+    *===========================-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+
+</html>
