@@ -12,7 +12,7 @@ Live: https://sawmu.github.io/sundayProphet/
 - Users can upload multiple images to mini gallery.
 
 
-<img src="./assets/image/sunday-bg.png" width="50%" height="50%">
+<img src="./assets/image/sunday_prophet.png" width="50%" height="50%">
 
 
 
