@@ -409,11 +409,11 @@ input[type="file"] {
 }
 
 .gallery-img:hover {
-    border: 3px solid #ff0;
+    border: 3px solid #cfb870;
 }
 
 .gallery-img.active {
-    border: 3px solid #f00;
+    border: 3px solid #cfb870;
 }
 
 @media screen and (max-width:992px) {

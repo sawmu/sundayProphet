@@ -320,21 +320,7 @@ var SAVEFILE = { mainId: "", images: [] },
       }
       a.clearRect(0, 0, n.width, n.height);
     }
-    var O = document.querySelector("#gallery-container");
-    (O.innerHTML = ""),
-      SAVEFILE.images.forEach(function (e, t) {
-        var n = document.createElement("div");
-        (n.className =
-          e.id === SAVEFILE.mainId ? "gallery-img active" : "gallery-img"),
-          (n.style.backgroundImage = "url(" + e.path + ")"),
-          n.addEventListener("click", function (e) {
-            switchImage(t, !0);
-          }),
-          O.appendChild(n);
-      });
-    var l = getCurrentImageIndex();
-    (document.querySelector("#btn-next").className = SAVEFILE.images[l + 1] ? "custom-file-upload" : "custom-file-upload disabled"),
-      (document.querySelector("#btn-prev").className = SAVEFILE.images[l - 1] ? "custom-file-upload" : "custom-file-upload disabled");
+   
   };
 
 
